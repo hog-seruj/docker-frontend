@@ -1,3 +1,5 @@
-Dockerfile for Drupal zen theme gulp setup.
+Dockerfile for Drupal 8 zen theme gulp setup.
 
-Usage `docker run --rm -it -v $(pwd):/work -u www-data:www-data skilldlabs/frontend:zen`
+Contains: `susy@2`
+
+Usage `docker run --rm -it -v $(pwd):/work -u $(id -u):$(id -g) skilldlabs/frontend:zen`

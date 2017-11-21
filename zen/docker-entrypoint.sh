@@ -1,8 +1,10 @@
 #!/bin/sh
 
-# prevent conflicts with existing
+# Prevent conflicts with existing packages.
 rm -rf node_modules
-
-/usr/bin/npm link gulp gulp-sass $NPM_PACKAGES
+# Allow run from any user.
+export HOME=/tmp
+# Link global packages.
+/usr/bin/npm link susy $NPM_PACKAGES
 
 exec "$@"

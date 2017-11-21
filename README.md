@@ -59,3 +59,25 @@ omega_4_3
 it will execute "compass compile -e production -s compact"
 Or you can use "omega_4_3 compass watch" etc.
 Same for 4_4
+
+#### Hint:
+
+Also will be useful bash function. Just add following code:
+
+``` bash
+dfe() {
+  if [ ! -z "$1" ]; then
+    version=:$1
+  fi
+  docker run --rm -it -v $(pwd):/work skilldlabs/frontend$version
+}
+```
+
+to your .bashrc or etc. And call proper container to compile your styles.
+
+```
+dfe
+dfe zen # for Zen theme  
+dfe omega_4_4 # for Omega theme v4.4
+dfe omega_4_3 # for Omega theme v4.3
+```
